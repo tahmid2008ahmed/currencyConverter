@@ -245,6 +245,15 @@ const UI = {
     });
   },
 
+  showMassge() {
+    const { givenCurrencyRate } = this.loadSelectors();
+    if (givenCurrencyRate.value === "") {
+      alert("Please, select necessary info.");
+      return true;
+    }
+    return false;
+  },
+
   async init() {
     // Fetch the currency conversion rates as soon as the page loads
     const obj = await data.getObj();
@@ -258,6 +267,8 @@ const UI = {
     // Add event listener for the convert button (optional, for further functionality)
     buttonElm.addEventListener("click", (e) => {
       e.preventDefault();
+
+      if (this.showMassge()) return;
 
       this.convertCurrency();
     });
