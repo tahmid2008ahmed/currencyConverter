@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="converter">
+          <h2>Welcome to Currency Converter Application</h2>
+
+          <div class="input-group">
+            <input
+              type="number"
+              placeholder="Type Your Money"
+              class="input"
+              id="givenCurrencyRate"
+            />
+            <select class="currency-dropdown" id="givenCurrency"></select>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="text"
+              placeholder="Converted Money"
+              class="input"
+              id="convertedCurrencyRate"
+            />
+            <select class="currency-dropdown" id="convertedCurrency"></select>
+          </div>
+        </div>
+
+        <div>
+          <button type="submit" id="convertButton">Convert Currency</button>
+        </div>
+      </form>
+
+      <div class="result">
+        <p><span id="givenCurrencyMoney">1 BDT</span> equals to</p>
+        <h3 id="convertedCurrencyMoney">0.008375 USD</h3>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
